@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../CTA HUSKIE"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
