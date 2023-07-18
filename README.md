@@ -82,7 +82,7 @@ Using Geo Pandas we can coordinate the trains location using CurrentStationId's 
 
 ![image](https://github.com/michaelslice/CTA-Data-Analysis-Visualization/assets/110714088/cfe5a089-4e63-41a9-aaf3-a997d2836d74)
 
-In the train tracker data (edf) some of the CurrentStationId's are routing to Null Island which is at the Earth's surface at zerp degrees latitude and and zero degrees longitude (O N, O E)
+In the train tracker data (edf) some of the CurrentStationId's are routing to Null Island which is at the Earth's surface at zero degrees latitude and and zero degrees longitude (O N, O E)
 
  ## l_stops & Stations Nearest Joins (sjoin_nearest)
 
