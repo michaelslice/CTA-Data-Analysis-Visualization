@@ -62,37 +62,66 @@ In general, we would expect that the stops would be listed in order from the nex
 
 ## Single Train Run
 
+For a given run number, we can track the train's path over time and even display it on a map.
+
 ![image](https://github.com/michaelslice/CTA-Data-Analysis-Visualization/assets/110714088/366ef063-55b6-43fc-a0d5-2983f01dc1fc)
+
+![image](https://github.com/michaelslice/CTA-Data-Analysis-Visualization/assets/110714088/48c1a292-03dd-470c-bddc-c9891f6be908)
+
+![image](https://github.com/michaelslice/CTA-Data-Analysis-Visualization/assets/110714088/390a3b78-4c0c-4b0e-8419-ce6014b66a2d)
 
 ## EDF DATA
 
+The General Transit Feed Specification—or GTFS—is an open format for packaging scheduled service data. GTFS data is produced by hundreds of transit agencies (including the CTA) around the world to deliver content for inclusion in maps and directions-giving services, including Google Maps.
+
 Information in the CTA train tracker beta comes from data fed to CTA from its rail infrastructure (unlike buses, our current railcar fleet does not have GPS hardware). This data is then processed by software we use to monitor our rail system which also generates the predictions for train arrivals based on recent train travel times from one point to another. (The software is a product called QuicTrak®.)
+
+## EUCLIDEAN DISTANCE
+
+In mathamatics, the Euclidean distance between two points in Euclidean space is the length of a line segment between two points. In this instance, We can use this formula to calculate distance in between train stops along the line. 
+
+![image](https://github.com/michaelslice/CTA-Data-Analysis-Visualization/assets/110714088/fe57b99b-4484-438a-bc33-267f690a10c7)
 
 ## Geo Pandas
 
 ![image](https://github.com/michaelslice/CTA-Data-Analysis-Visualization/assets/110714088/0f62f72d-ff6c-4394-b5bc-8fc331233d02)
 
-Using Geo Pandas we can coordinate the trains location using CurrentStationId's in the EDF data, to the scheduled destination of ParentStops in l_stops 
+Using Geo Pandas we can coordinate the trains location using CurrentStationIds in the EDF data, to the scheduled destination of ParentStops in l_stops 
 
 ## Parent Station Ids Sorted by Line and Chronological Order Mapping
 
 ![image](https://github.com/michaelslice/CTA-Data-Analysis-Visualization/assets/110714088/46545d0d-6a39-4795-ba50-dab49df694c6)
 
+* Green: Green Line
+* Blue: Blue Line
+* Brown: Brown Line
+* Purple: Purple Line
+* Pink: Pink Line
+* Red: Red Line
+* Orange: Orange Line
+* Green: Green Line
+* Grey: If marked grey, the stop has nore than 1 parent station id.
+* Black: If marked black, there are overlapping train lines that have stops with the same parent station id. 
+
 ## Null Island Encounter
 
 ![image](https://github.com/michaelslice/CTA-Data-Analysis-Visualization/assets/110714088/cfe5a089-4e63-41a9-aaf3-a997d2836d74)
 
-In the train tracker data (edf) some of the CurrentStationId's are routing to Null Island which is at the Earth's surface at zero degrees latitude and and zero degrees longitude (O N, O E)
+In the train tracker data (EDF) some of the CurrentStationIds are routed to Null Island which is at the Earth's surface at zero degrees latitude and and zero degrees longitude (O N, O E). This is important because the CTA track sensors on the Yellow Line in 
+particular are creating data that does not make sense.
+
+## Null Island Points
+
+![image](https://github.com/michaelslice/CTA-Data-Analysis-Visualization/assets/110714088/c3c0f602-5474-475d-9bd4-803d57e2a75d)
+
+The CurrentStationIds above coordinates to the Yellow Line stops, which are Dempster-Skokie, Oakton-Skokie, and Howard.
 
  ## l_stops & Stations Nearest Joins (sjoin_nearest)
 
 ![image](https://github.com/michaelslice/CTA-Data-Analysis-Visualization/assets/110714088/f20f2201-9c36-4ae3-88a1-c74e30bcd489)
 
-Using sjoin_nearest we can configure the data set to connect CurrentStationId's to their closet parent_station along the line
-
-## Null Island Points
-
-![image](https://github.com/michaelslice/CTA-Data-Analysis-Visualization/assets/110714088/c3c0f602-5474-475d-9bd4-803d57e2a75d)
+Instead of calculating the Euclidean Distance for every CurrentStationId, and the closet parent_station. Geo Pandas was leveraged by using the sjoin_nearest function to 
+configure the data set to connect CurrentStationIds to their closet parent_station along the different train lines.
 
 ## Standard Deviation of Time in Between Stops on The Blue Line
 
