@@ -62,7 +62,12 @@ In general, we would expect that the stops would be listed in order from the nex
 
 ## Single Train Run
 
+For a given run number, we can track the train's path over time and even display it on a map.
+
 ![image](https://github.com/michaelslice/CTA-Data-Analysis-Visualization/assets/110714088/366ef063-55b6-43fc-a0d5-2983f01dc1fc)
+
+![image](https://github.com/michaelslice/CTA-Data-Analysis-Visualization/assets/110714088/48c1a292-03dd-470c-bddc-c9891f6be908)
+
 
 ## EDF DATA
 
