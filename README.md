@@ -135,6 +135,6 @@ A reliable and consistent public transit system is essential for the functioning
 
 ## Time to Travel Around all Stops in the Loop
 
-![image](https://github.com/michaelslice/CTA-Data-Analysis-Visualization/assets/110714088/fe2d8e49-c8e8-48c4-8a58-83af56bcf86f)
+![image](https://github.com/michaelslice/CTA-Data-Analysis-Visualization/assets/110714088/cab25269-d06b-4195-aa19-43494ccd39aa)
 
 The Brown, Purple, Pink, and Orange line provide access to key residential, commercial, and cultural areas throughout the city. By comparing the average travel time between stops across these 4 different lines, it gives an idea of which lines are most efficient during the day compared to each other.
