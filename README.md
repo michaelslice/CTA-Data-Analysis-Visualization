@@ -123,11 +123,18 @@ The CurrentStationIds above coordinates to the Yellow Line stops, which are Demp
 Instead of calculating the Euclidean Distance for every CurrentStationId, and the closet parent_station. Geo Pandas was leveraged by using the sjoin_nearest function to 
 configure the data set to connect CurrentStationIds to their closet parent_station along the different train lines.
 
-## Standard Deviation of Time in Between Stops on The Blue Line
+## Standard Deviation of Time to Travel Between Consecutive Stops on The Blue Line
 
 ![image](https://github.com/michaelslice/CTA-Data-Analysis-Visualization/assets/110714088/dfabce12-0bed-4775-842b-303d7517d87b)
+
+## Variation
+The variation in the travel times between stops is important in understanding the consistency and reliability of the Chicago Blue Line. By analyzing the standard deviation of the train times, we can help commuters better understand their travel times.
+
+## Delays
+A reliable and consistent public transit system is essential for the functioning of a busy city like Chicago. However, inconsistencies and delays can cause significant disruptions to commuters' daily routines, leading to lost time and productivity.
 
 ## Time to Travel Around all Stops in the Loop
 
 ![image](https://github.com/michaelslice/CTA-Data-Analysis-Visualization/assets/110714088/fe2d8e49-c8e8-48c4-8a58-83af56bcf86f)
 
+The Brown, Purple, Pink, and Orange line provide access to key residential, commercial, and cultural areas throughout the city. By comparing the average travel time between stops across these 4 different lines, it gives an idea of which lines are most efficient during the day compared to each other.
